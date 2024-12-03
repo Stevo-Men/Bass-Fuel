@@ -27,7 +27,7 @@ services:
       - ./sql/data-mock.sql:/docker-entrypoint-initdb.d/2-data-mock.sql
     restart: 'always'
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_DB: 'framework'
       POSTGRES_USER: 'dev'
