@@ -1,4 +1,122 @@
 /* TODO: Remove the sample code to test the CSS is correctly linked  */
 body {
-    background-color: rgb(255, 255, 255);
+
+    background-color: rgb(182, 182, 182);
+}
+
+h5 {
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%; 
+    height: 200px; 
+}
+
+.card-body {
+    flex-grow: 1; /* Ensures the body stretches evenly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Proper spacing */
+
+}
+
+.card-footer {
+    text-align: center; /* Center footer content */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+.swiper-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px; /* Fixed height for slides */
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* This ensures images maintain aspect ratio */
+    max-height: 400px; /* Maximum height for images */
+    padding: 20px;
+    background: white;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1;
+}
+
+.product-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.product-info .price {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.product-info .btn {
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        height: 500px;
+    }
+
+    .swiper-slide img {
+        max-height: 300px;
+    }
+
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
 }
